@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humburger Menu</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+</head>
+<body>
+        <nav>
+            <div class="logo"><h1>Responsive Webpage</h1></div>
+            <div class="openMenu"><i class="fa fa-bars"></i></div>
+            <ul class="mainMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <div class="closeMenu"><i class="fa fa-times"></i></div>
+                <span class="icons">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-github"></i>
+                </span>
+            </ul>
+        </nav>
+        <h1>About Apple Inc :</h1>
+        <p>Apple Inc. is a multinational technology company headquartered in Cupertino, California, USA. Founded on April 1, 1976, by Steve Jobs, Steve Wozniak, and Ronald Wayne, Apple has grown to become one of the world's most valuable and influential companies in the technology industry.
+          Throughout its history, Apple has been a pioneer in innovation, producing a wide range of consumer electronics, computer software, and digital services. Some of its most notable products include the Macintosh line of computers, the iPod, iPhone, iPad, and Apple Watch, as well as popular software like macOS, iOS, and iTunes.
+          Apple's iconic logo, an apple with a bite taken out of it, has become synonymous with the brand. It represents the company's mission to bring simplicity and elegance to technology products and services.
+          One of Apple's defining characteristics is its commitment to design and user experience. The company places a strong emphasis on creating products that are not only powerful and functional but also aesthetically pleasing and intuitive to use.
+          Apple's success can be attributed to its ecosystem approach, where its hardware, software, and services are.</p>
+        <h2>Contact Us</h2>
+        <p>If you have any questions or inquiries, feel free to contact us.</p>
+        <p>Email: contact@example.com</p>
+        <p>Phone: +1 (555) 123-4567</p>
+
+    <script>const mainMenu = document.querySelector('.mainMenu');
+        const closeMenu = document.querySelector('.closeMenu');
+        const openMenu = document.querySelector('.openMenu');
+        const menu_items = document.querySelectorAll('nav .mainMenu li a');
+        openMenu.addEventListener('click',show);
+        closeMenu.addEventListener('click',close);
+        
+        // close menu when you click on a menu item 
+        menu_items.forEach(item => {
+            item.addEventListener('click',function(){
+                close();
+            })
+        })
+        
+        function show(){
+            mainMenu.style.display = 'flex';
+            mainMenu.style.top = '0';
+        }
+        function close(){
+            mainMenu.style.top = '-100%';
+        }</script>
+
+        <style>
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+.container {
+            max-width: 800px;
+            width: 100%;
+        }
+nav {
+  background: #0011ff;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+nav .mainMenu li a:hover {
+  background: rgb(255, 94, 0);
+}
+nav .openMenu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+nav .mainMenu .closeMenu,
+.icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+.fa-facebook:hover {
+  color: rgb(0, 110, 255);
+}
+.fa-twitter:hover {
+  color: rgb(86, 154, 243);
+}
+.fa-instagram:hover {
+  color: rgb(255, 0, 191);
+}
+.fa-github:hover {
+  color: rgb(255, 123, 0);
+}
+nav .logo {
+  margin: 6px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+@media (max-width: 800px) {
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #0011ff;
+    transition: top 0.5s ease 0s;
+    display: none;
+  }
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  nav .openMenu {
+    display: block;
+  }
+  nav .mainMenu li a:hover {
+    background: none;
+    color: rgb(255, 123, 0);
+  }
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
+
+        </style>
+</body>
+</html>

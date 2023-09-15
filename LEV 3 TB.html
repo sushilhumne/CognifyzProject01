@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+  justify-content: center;
+  padding: 20px;
+}
+
+.thumbnail {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s, width 0.3s, height 0.3s;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  z-index: 1;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.enlarged-image {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.enlarged-image img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+</style>
+</head>
+<body>
+  <div class="gallery-container">
+    <img class="thumbnail" src="" alt="Image 1" onclick="showImage('image1.jpg')">
+    <img class="thumbnail" src="" alt="Image 2" onclick="showImage('image2.jpg')">
+    <img class="thumbnail" src="" alt="Image 3" onclick="showImage('image3.jpg')">
+
+    <img class="thumbnail" src="" alt="Image 4" onclick="showImage('image4.jpg')">
+    <img class="thumbnail" src="" alt="Image 5" onclick="showImage('image5.jpg')">
+    <img class="thumbnail" src="" alt="Image 6" onclick="showImage('image6.jpg')">
+
+    <img class="thumbnail" src="" alt="Image 7" onclick="showImage('image7.jpg')">
+    <img class="thumbnail" src="" alt="Image 8" onclick="showImage('image8.jpg')">
+    <img class="thumbnail" src="" alt="Image 9" onclick="showImage('image9.jpg')">
+
+    <img class="thumbnail" src="" alt="Image 10" onclick="showImage('image10.jpg')">
+    <img class="thumbnail" src="" alt="Image 11" onclick="showImage('image11.jpg')">
+    <img class="thumbnail" src="" alt="Image 13" onclick="showImage('image12.jpg')">
+
+    <img class="thumbnail" src="" alt="Image 13" onclick="showImage('image13.jpg')">
+    <img class="thumbnail" src="" alt="Image 14" onclick="showImage('image14.jpg')">
+    <img class="thumbnail" src="" alt="Image 15" onclick="showImage('image15.jpg')">
+    <img class="thumbnail" src="" alt="Image 16" onclick="showImage('image16.jpg')">
+
+  <div class="enlarged-image" id="enlargedContainer" onclick="FullScreenImage()">
+    <img id="enlargedImage" src="" alt="Enlarged Image">
+  </div>
+
+  <script>
+    function showFullScreenImage(imageSrc) {
+      const enlargedContainer = document.getElementById('enlargedContainer');
+      const enlargedImage = document.getElementById('enlargedImage');
+
+      enlargedImage.src = imageSrc;
+      enlargedContainer.style.display = 'flex';
+    }
+
+    function FullScreenImage() {
+      const enlargedContainer = document.getElementById('enlargedContainer');
+      enlargedContainer.style.display = 'none';
+    }
+  </script>
+</body>
+</html>

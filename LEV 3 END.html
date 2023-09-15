@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Final Task - Internship</title>
+    <style>
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #00000000;
+}
+
+.fixed-header {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ff0000;
+    bottom: -4px;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    width: 135px;
+    height: auto;
+    margin-left: 20px;
+}
+section {
+    padding: 8rem;
+    background-color: rgba(255, 255, 255, 0.735);
+    margin: 5rem;
+    border-radius: 40px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.291);
+    transition: background-color 0.3s ease-in-out;
+}
+
+section:hover {
+    background-color: #f8f8f8;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+section p {
+    font-size: 1.2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    color: rgb(0, 0, 0);
+}
+.form-container {
+  width: 100%;
+  max-width: 800px; 
+  margin: -50px auto 20px;
+  padding: 30px;
+  border-radius: 20px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-nav {
+    list-style: none;
+    flex-direction: row;
+    justify-content: end;
+    padding: 1px;
+    display: flex;
+  }
+  
+  .navbar-nav li {
+    margin-right: 10px;
+  }
+  
+  .navbar-nav li:last-child {
+    margin-right: 0;
+  }
+  .navbar-nav li a {
+    display: inline-block;
+    padding: 5px ;
+    background-color: none;
+    color: #333333;
+    text-decoration: none;
+    border-radius: 50px;
+  }
+  .navbar-nav li a:hover {
+    background-color: #030303;
+    color: #ffffff;
+  }
+
+textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical; 
+}
+.congrats-btn {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #12c2e988;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 2% 45%;
+  border: none; 
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer; 
+}
+
+.congrats-btn:hover {
+  margin: 0 auto;
+}
+.content-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 0;
+}
+
+.content-block {
+    text-align: center;
+    max-width: 300px;
+    padding: 1rem;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: white;
+}
+
+.content-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.content-block h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.content-block p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.learn-more {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #ff0000;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.learn-more:hover {
+    background-color: #ff0000;
+}
+    </style>
+</head>
+
+<body>
+    <header class="fixed-header">
+        <img src="https://www.cognifyz.com/images/cogni-logo.png" alt="Logo" class="logo"><br>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Aboutus">About us</a></li>
+                <li><a href="#Courses">Courses</a></li>
+                <li><a href="#Register">Register</a></li>
+                <li><a href="#Applynow">Apply now</a></li>
+                <li><a href="#Intenship">Internship</a></li>
+                <li><a href="#Contactus">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="Home">
+    <h1> Web Developer Internship Opportunities at Cognifyz Technologies</h1>
+    <p>Welcome to the Future of Web Development! Are you ready to kickstart your career as a web developer? Look no further than Cognifyz Technologies' Web Developer Internship program. 
+        Join us and embark on a journey that will shape your skills, expand your horizons, and set you on a path to becoming a sought-after web development professional.</p>
+    </section>
+    <section id="Aboutus">
+        <h1>Internship Overview</h1>
+        <p> <li>Duration: 3 months</li>
+            <li>Location: [City, State]</li>
+            <li>Start Date: [Month, Year]</li>
+            <br>
+            Our internship program is designed to provide you with hands-on experience in the world of web development. 
+            Throughout the 3-month journey, you'll have the opportunity to work on real projects, collaborate with experienced developers, and contribute to cutting-edge web solutions.
+            Whether you're a coding enthusiast or a design aficionado, this program will empower you to create impactful web experiences.</p><br>
+    </section>
+    <section id="Aboutus">
+        <h1>Highlights of the Internship</h1>
+        <p><li>Real-World Experience: Dive into actual projects and gain practical skills that will set you apart in the industry.</li>
+            <li>Mentorship: Learn from seasoned web developers who are dedicated to guiding you through challenges and fostering your growth.</li>
+            <li>Collaborative Environment: Engage with a dynamic team that values creativity, innovation, and teamwork.</li>
+            <li>Skill Enhancement: Hone your coding, design, and problem-solving abilities under the guidance of industry professionals.</li></p><br>
+    </section>
+    <section id="Aboutus">
+        <h1>Qualifications</h1>
+        <p><li>Proficiency in HTML, CSS, and JavaScript</li>
+        <li>Familiarity with front-end frameworks (e.g., React, Vue)</li>
+        <li>Passion for web development and a willingness to learn</li></p>
+    </section>
+    <section id="Register">
+        <div class="container mt-5">
+            <div class="form-container">
+              <h2 class="text-center mb-4">Register</h2>
+              <form id="Register-form">
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" required>
+                </div>
+               <div class="mb-3"></div>
+                <div class="mb-3">
+                  <label>Enter Your Gender</label><br>
+                  <input type="radio" id="gender" name="gender" value="male" /> Male <br>
+                  <input type="radio" id="gender" name="gender" value="female" /> Female <br>
+                  <input type="radio" id="gender" name="gender" value="others" /> Others <br>
+                  <br><label> Enter your Phone no. : </label><br>  
+                  <input type="text" name="country code"  value="+91" size="2"/>   
+                  <input type="text" name="phone" size="10"/>
+                </div>
+                <div class="mb-3">
+                  <label>Enter Message :</label><br>
+                  <textarea rows="3" cols="3">TEXT HERE!</textarea>
+                  <br><button type="submit" class="btn btn-primary congrats-btn" id="RegisterButton">Submit</button>
+                </form>
+            </section>
+            <section id="Courses" class="content-section">
+                <div class="content-block">
+                    <img src="https://www.cognifyz.com/images/data-ana.png" alt="Image 1" class="content-image">
+                    <h2>3 Months </h2>
+                    <p>data data-analytics</p>
+                    <a href="https://www.cognifyz.com/course-pages/data-analytics.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="content-block">
+                    <img src="https://www.cognifyz.com/images/machine-learning.png" alt="Image 2" class="content-image">
+                    <h2>3 Months</h2>
+                    <p>machine-learning.</p>
+                    <a href="https://www.cognifyz.com/course-pages/machine-learning.html" class="learn-more">Learn More</a>
+                </div>
+                <div class="content-block">
+                    <img src="https://www.cognifyz.com/images/td-deep-learning.webp" alt="Image 3" class="content-image">
+                    <h2>3 Months</h2>
+                    <p>deep-learning</p>
+                    <a href="https://www.cognifyz.com/course-pages/deep-learning.html" class="learn-more">Learn More</a>
+                </div>
+            </section>
+            <section id="Applynow">
+                <h1>We are Hiring Interns</h1>
+                    <p>The key to success on your doorstep!</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf00AjPhbqp-aD3Zcg5XwDVejs8EsJGHU3DKpSjW8cMSJbVpQ/viewform" class="Apply now">Apply Now</a>
+            </section>
+            <section id="Contactus">
+                <h1>Contact Us</h1>
+                    <p>Have questions or need more information about the internship? Feel free to reach out to us.</p>
+                <li>Email: internship@cognifyztech.com</li>
+                <li>Phone no : 123456789</li>
+            </section>
+    <footer>
+        <p>&copy; 2023 Only for the education purpuse thankyou @cognifyz </p>
+    </footer>
+    
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll("nav ul li a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", smoothScroll);
+    });
+
+    function smoothScroll(e) {
+        e.preventDefault();
+
+        const targetId = e.currentTarget.getAttribute("href");
+        const targetElement = document.querySelector(targetId);
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+        const startPosition = window.pageYOffset;
+        const distance = targetPosition - startPosition;
+        const duration = 800; // Adjust the scrolling speed here
+        let startTimestamp = null;
+
+        function step(timestamp) {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = timestamp - startTimestamp;
+            const scrollAmount = easeInOutCubic(progress, startPosition, distance, duration);
+            window.scrollTo(0, scrollAmount);
+            if (progress < duration) {
+                requestAnimationFrame(step);
+            }
+        }
+
+        requestAnimationFrame(step);
+    }
+
+    function easeInOutCubic(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t * t + b;
+        t -= 2;
+        return c / 2 * (t * t * t + 2) + b;
+    }
+});
+
+    </script>
+</body>
+</html>
